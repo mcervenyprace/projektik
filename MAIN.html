@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!-- toto je pracovni soubor ktery bude pretvoren na index.html = defaultni stranku -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styl.css">
+
+<meta name= 'description' content = "Projekt pro demonstraci PHP dovednosti"/>
+
+<title>projektik</title>
+</head>
+<body>
+<header>
+
+<iframe src="//ad.geekhosting.cz/reklama.html" style="overflow: hidden;border: none;" frameborder="0" scrolling="no" width="100%" height="auto" allowfullscreen><p>Your browser does not support iframes.</p></iframe>
+
+</header>
+
+
+
+<div id="rozcestnikDiv" class = "rozcestnik">
+</div>
+
+<script>
+
+
+function onloadFunkce(){
+	document.getElementById("rozcestnikDiv").innerHTML=this.responseText;
+}
+
+function pageLoad(){
+/*
+		Vola "PHPforMAIN.php" se switch = 1, zakladni volani, viz "PHPforMAIN.php". 
+*/
+	var xmlhttp=new XMLHttpRequest();
+
+	xmlhttp.onload = onloadFunkce;
+	xmlhttp.open("POST", "PHPforMAIN.php", true );
+
+	
+	data = new FormData();
+	data.append('switch', '1');	
+	
+	xmlhttp.send(data);
+}
+
+
+
+
+pageLoad();
+</script>
+
+</body>
+
+
+
+
+
+
+</html>
+

@@ -1,0 +1,3 @@
+Jediná stránka, na kterou by se spider bot mìl dostat, je index.html (pøihlášení). 
+Ten má vyplnìný title a meta tag s popisem pro SEO, což jsou dvì místa celého projektu kde lze umístit
+klíèová slova. 

@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!-- toto je HTML stranka pro zobrazovani dat, nahravani a mazani dat a odhlasovani/presun na vytvareni novych uzivatelu.
+Pri zavolani hlavniho modulu "PHPforMAIN.php" se pouziva promenna "switch" (POST) ktera urcuje akcu. Vyznam jednotlivych hodnot viz "PHPforMAIN.php".
+Stranka obsahuje 3 taby prepinatelne pomoci JavaScrriptu (viz JavaScript komentare dole).
+tab1 = tabulka s obrazky (umoznuje smazat obrazek)
+tab2 = tab se vstupem pro nahrani obrazku a nahledem
+tab3 = tab pro odhlaseni/vytvoreni noveho uzivatele
+ -->
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="styl.css">
+<title>projektik - tabulka</title>
+</head>
+
+<body>
+
+
+<div class="pozadiDiv">
+
+	<div class="hlavniDiv">
+
+		<div class = "tabControlDiv">
+			<div class = "tabContainerDiv" >
+				<div id="tab1" class = "tabDiv" onclick="prepniTab(event, 'tabObsah1')">
+					<div class ="tabText"> Obrázky </div>
+				</div>
+			</div>
+			
+			<div id="tab2" class = "tabContainerDiv" >
+				<div id="tab2Inside" class = "tabDiv" onclick="prepniTab(event, 'tabObsah2')">				
+					<div class ="tabText"> Nahrávání obrázků</div>			
+				</div>
+			</div>
+			
+			<div id="tab3" class = "tabContainerDiv" >
+				<div id="tab3Inside" class = "tabDiv" onclick="prepniTab(event, 'tabObsah3')" >
+					<div class ="tabText">Uživatel</div>	
+				</div>
+			</div>
+		
+		</div>
+
+		<div class = "contentDiv">
+			
+			
+				<div id="tabObsah1" class = "tabObsah"  >	
+					<div class="tabulkaObal">
+						
+						<div id="tabulkaNaseptavac" class = "tabulkaNaseptavacDiv">
+						
+						
+							
+								 <div id= "livesearch" class= "livesearchContainer">
+									
+									
+									<form id="forma4" class= "formUzivatelClass" method="POST" action="PHPforMAIN.php">
+										<input type="text" id="zadavac" class = "liveSearchInput" placeholder="Vyhledávání obrázků.." onkeyUp="aktivniVyhledavac(this.value)">
+										<input type="hidden" name="switch" value="6" />
+									</form>
+									
+								
+								</div>
+								
+									
+						
+						</div>
+						
+						
+						<div id="tabulkaZde" class = "tabulkaContainerDiv">
+						
+						
+						
+						</div>
+					</div>
+				</div>
+			
+				<div id="tabObsah2" class = "tabObsah">
+				
+					<div class="tabObsah2container">
+						
+						<div class = "obrazekInputDiv">
+						
+							<form id="forma3" class = "obrazekInputform" method="POST" action="PHPforMAIN.php"  enctype="multipart/form-data">
+								<input type="file" name="obrazekVstup" id="obrazekVstup" class="vstupObrazek" onchange="nastavNahled();" accept="image/bmp,image/gif,image/jpeg,.bmp" />
+								<input type="hidden" name="switch" value="7" />
+								
+								<button type="submit" value="Submit" class="tlacitkoObrazek">potvrdit</button>
+							</form>
+							
+						</div>
+						
+						
+						<div class="obrazekNahledContainer">
+
+							
+							<div id="obrazekNahled" class="obrazekNahledDiv" ondrop="dropAktivace(event);" ondragover="dragOverAktivace(event);">
+								<img id="nahledImg"  src = "#" class= "obrazekNahlednik" alt="náhled">
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>			
+			
+				<div id="tabObsah3" class = "tabObsah" style="display:flex">
+												
+				
+						<div class = "uzivatelLevyDiv">
+
+							<div class= "uzivatelDivPolovina">
+								<div class="jmenoUzivateleContainer">
+								<p>Jméno přilhlášeného uživatele:</p>
+								<p id="uzviatelZobraz">XXXXXXXXXXXX</p>
+								</div>
+							</div>
+							
+							<div class= "uzivatelDivPolovina">
+								<div class="odhlasitContainer">
+							
+									<form id="forma5" class = "formUzivatelClass" method="POST" action="PHPforMAIN.php">
+										<button type="submit" value="Submit" class="tlacitkoOdhlasit">Odhlásit se</button>
+										<input type="hidden" name="switch" value="5" />
+									</form>	
+								</div>	
+							</div>
+							
+							
+							
+							
+							
+							
+						</div>
+						
+						
+						<div class = "uzivatelPravyDiv">
+
+							<div class="uzivatelButtonDivContainer">								
+							
+									<form id="forma2" class = "formUzivatelClass" method="POST" action="PHPforMAIN.php">
+										<button type="submit" value="Submit" class="tlacitkoExtra">Vytvořit nového uživatele</button>
+										<input type="hidden" name="switch" value="4" />
+									</form>			
+							
+								
+							</div>
+							
+							
+
+							
+							
+						</div>
+					
+				</div>
+			
+		</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+function prepniTab(evt, IDTabu) {
+/*
+	Prepina elementy "tab1","tab2" a "tab3" tak, ze nastavi hodnotu jejich style.display  na "flex" nebo "none".
+*/
+
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabObsah");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tabDiv");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(IDTabu).style.display = "flex";
+  
+  evt.currentTarget.className += " active";
+} 
+
+function onreadystatechangeRequestFunction() {
+/*
+viz aktivniVyhledavac(textHledani).
+*/
+    if (this.readyState==4 && this.status==200) {
+		//zatim nic
+		//alert(this.responseText);
+		var element = document.getElementById("tabulkaZde");		
+		element.innerHTML = this.responseText;
+
+		//alert(this.responseText);
+    }
+  }
+
+
+function aktivniVyhledavac(textHledani){
+/*
+	Odesle pomoci GET promennou "textHledani" = X, kde X je hodnota z elementu "zadavac".
+	VOla tableSearch.php a po ziskani dat onreadystatechangeRequestFunction ktera nastavi 
+	elementu "tabulkaZde" innerHTML na responseText odeslane XMLHttpRequest.
+*/
+	//alert("start");
+
+	var element = document.getElementById("zadavac");
+	var poslat = element.value;
+	
+	//alert(poslat);
+	
+	var xmlhttp=new XMLHttpRequest();	
+	
+	xmlhttp.onreadystatechange= onreadystatechangeRequestFunction;
+
+	xmlhttp.open("GET", "tableSearch.php?textHledani="+poslat);
+			
+	xmlhttp.send();
+
+	
+	
+	
+}
+
+function smazatSkript(tlacitkoKlikane){
+/*
+	Zavola 'PHPforMAIN.php' s hodnotou promenne "switch" = 6 a "IDMazanehoObrazku" = X. 
+	Viz 'PHPforMAIN.php'.
+	Pri uspesnem behu zavola aktivniVyhledavac() => opetovne nahrani obrazku (bez smazaneho).
+*/	
+	var IDMazanehoObrazku = tlacitkoKlikane.value;
+	var xhr=new XMLHttpRequest();	
+	xhr.open('POST', 'PHPforMAIN.php');
+	
+	var params = "switch=6&IDMazanehoObrazku=" + IDMazanehoObrazku;
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.send(params);
+	
+	xhr.onload = () => {
+   console.log(xhr.responseText);
+   
+   if(xhr.responseText != ""){
+	//case prubeh s chybou
+	alert(xhr.responseText);
+   }
+   else{
+    //case prubeh ok
+	var element = document.getElementById("zadavac");
+	aktivniVyhledavac(element.value);
+   }
+   
+   
+}
+	
+	
+	
+	
+	/*
+	
+	$element = tlacitkoKlikane.parentElement;
+	alert($element.innerHTML)
+	*/
+}
+
+
+function nastavNahled(){
+/*
+Nastavi nahled obrazku aby zobrazil soubor vybrany v elementu "obrazekVstup". 
+prevzato Z:
+https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded
+http://jsfiddle.net/LvsYc/638/
+*/
+	
+	var input = document.getElementById("obrazekVstup");
+		
+	if (input.files){
+
+		if(input.files[0]){
+			//alert("optimus");
+			
+			var reader = new FileReader();
+				
+			reader.onload = function(e) {
+				var obrazek = document.getElementById("nahledImg");
+				obrazek.src = e.target.result;
+				}
+			reader.readAsDataURL(input.files[0]);
+
+		}
+	}
+	
+}
+
+function dropAktivace(event){
+/*
+Nastavi pri pretazeni obrazku do daneho elementu vstup na dany obrazek. 
+Pro spravne fungovani musi byt pouzita i metoda dragOverAktivace (event).
+viz
+https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
+https://stackoverflow.com/questions/47515232/how-to-set-file-input-value-when-dropping-file-on-page
+
+*/
+	event.preventDefault();	
+
+	var fileInput = document.getElementById('obrazekVstup');
+	fileInput.files = event.dataTransfer.files;
+	fileInput.onchange(event);
+	
+}
+
+function dragOverAktivace(event){
+/*
+Zabraneni defaultni akci pri pretazeni obrazku do daneho elementu - nezbytna pomocna spolu s dropAktivace();
+*/
+	event.preventDefault();
+}
+
+function obrazekSkript(element){
+/*
+Zobrazi obrazek pri klepnuti na Div co je jeho predek.
+*/
+
+	var obrazek = element.firstChild;	
+	//alert(obrazek.src);
+	window.open(obrazek.src);	
+}
+
+</script>
+
+
+</body>
+
+</html>
+
+
+

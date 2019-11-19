@@ -1,0 +1,9 @@
+8.11. - Zaèátek projektu, tvorba HTML základù. 
+10.11. - Vytvoøení tabulek, pøihlašování uživatelù.
+13.11. - Vytvoøení objektù a metod pro nahrávání obrázkù.
+14.11. - Úprava HTML pro zobrazení náhledu a rùznì dimenzovaných obrázkù.
+15.11. - Systém kontroly obrázkù a ukládání souborù do adresáøe.
+17.11. - Zapoènutí a skonèení session, kontrola uživatele. Projekt funkèní ve Firefox na localhost.
+18.11. - Projekt funkèní v Edge a Chrome (viz problemChromeEdge.bmp) na localhost, kontrola syntaxe za pomoci online validátorù.
+19.11. - Projekt zkoušen na free webhostingu, úprava pro situaci kdy existuje DB ale je bez tabulek, revalidace. 
+Použité validátory viz validace.txt.

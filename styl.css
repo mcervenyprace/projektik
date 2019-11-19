@@ -1,0 +1,503 @@
+/* CSS soubor pro projek projektik */
+
+html{
+	width: 100%;
+    height:100%;	
+}	
+
+head{
+
+}
+
+body {
+
+	width: 100%;
+    height:100%;
+	margin: 0 auto;
+	background-color: black;
+	color: white;
+}	
+	
+
+
+.pozadiDiv {
+  	background-color: black;
+
+  width: 100%;
+  height:100%;
+	
+	color: black;
+	
+}  
+
+.hlavniDiv{
+  background-color: gray;
+
+  width: 70%;
+  height:70%;
+  top: 15%;
+  left: 15%;
+		position: absolute;
+	
+}
+
+.pozadiDivUzivatel {
+  	background-color: black;
+
+  width: 100%;
+  height:100%;
+
+  	display: flex;
+	justify-content: center;
+    align-items: center;
+	color: black;
+	
+}  
+
+.hlavniDivUzivatel{
+  
+  background-color: lightgray;
+  padding: 1%;
+  
+  width: 50%;
+
+	
+}
+
+.tabControlDiv{
+  background-color: red;
+
+  width: 100%;
+  height:10%;
+	
+}
+
+.contentDiv{
+  background-color: blue;
+  width: 100%;
+  height:90%;
+	
+}
+.tabContainerDiv{
+  background-color: black;	
+  width: calc(100%  /3);
+  height:100%;
+  float: left;  
+  user-select: none;	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;  
+}
+
+
+.tabDiv{
+  background-color: LightGray;	
+  width: 100%;
+  height:100%;	
+  float: left;
+  border-radius: 15px 15px 0px 0px;
+  border: 3px solid gray;
+	
+  box-sizing: border-box;	
+  
+
+
+}
+
+.tabText{
+	width: 100%;
+	height:50%;	
+	top: 25%;
+	position: relative;
+
+
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;
+	text-align: center;
+			
+}
+
+.tabDiv:hover{
+  background-color: white;	
+
+
+}
+
+.tabDivactive {
+  background-color: white;	
+  width: 100%;
+  height:100%;	
+  float: left;
+  border-radius: 15px 15px 0px 0px;
+  border: 3px solid gray;
+	
+  box-sizing: border-box;	
+}
+
+.contentDiv{
+  background-color: LightGray;
+  border: 3px solid gray;  
+  box-sizing: border-box;	
+}
+
+.nadpisDiv{
+	background-color: LightGray;
+
+	width: 100%;
+	height:10%;
+	font-size: 200%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Verdana, Geneva, sans-serif;
+
+	border-style: double;
+	border-width: 4px;
+	border-color: darkgray; 
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	
+	user-select: none;
+  }
+
+
+.inputAndTextContainerDiv{
+	
+	height: 30%;
+	width: 100%;
+
+	text-align: left;
+
+	padding-top: 3%;
+	padding-bottom: 3%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none; 
+user-select: none;
+}
+
+.buttonContainerDiv{
+	height: 30%;
+	width: 100%;
+	font-size: large;
+	font-family: Verdana, Geneva, sans-serif;
+	display: flex;
+}
+
+.tlacitko{	
+	font-size: large;
+	font-family: Verdana, Geneva, sans-serif;	
+}
+
+
+
+.inputContainerDiv{
+	width: 70%;
+	float: right;	   
+}
+
+.formUzivatelClass{
+	height: 100%;
+	width: 100%;	
+}
+
+.inputText{
+	width: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;   
+}
+
+.rozcestnik{	
+	height: 100%;
+	width: 100%;	
+}
+
+.buttonLeftDiv{
+	
+	height: 100%;
+	width: 60%;
+	float: left;
+}
+
+.buttonRightDiv{
+	height: 100%;
+	width: 60%;
+	float: right;	
+	justify-content: right;
+	display: flex;
+}
+
+.tabObsah{
+  display: none;	
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+.uzivatelDivPolovina{
+	width: 100%;
+	height: 50%;
+	display: flex;
+
+}
+
+
+.uzivatelLevyDiv{
+	height: 100%;
+	width: 60%;
+	float: left;	
+	
+}
+
+.uzivatelPravyDiv{
+	width: 40%;
+	height:100%;
+	float: left;
+	
+}
+
+
+
+.jmenoUzivateleContainer{
+	padding:5%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;  
+	
+}
+
+.odhlasitContainer{
+	padding:5%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;  
+	width: 100%;
+}
+
+.uzivatelButtonDivContainer{
+	
+	
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large; 
+	height:100%;
+	display: flex;
+	width: 100%;
+	padding:10%;
+}
+
+.uzivatelButtonDivContainerHorniDolni{
+
+}
+
+
+.tlacitkoExtra{
+		padding:5%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: large;  
+}
+
+.tlacitkoOdhlasit{
+		padding:5%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: large; 
+	
+}
+
+.tabulkaObal{
+	height:100%;
+	width: 100%;	
+	
+}
+
+.tabulkaContainerDiv{
+	height:90%;
+	width: 100%;	
+	display: flex;
+	 overflow: auto;
+	 
+}
+
+
+.tabulkaNaseptavacDiv{
+	height:12%;	
+	width: 100%;	
+
+}
+
+.livesearchContainer{
+	height: 100%;
+	width: 100%;
+	padding: 1%;
+	border: 3px solid gray;
+	box-sizing: border-box;
+	
+}
+.liveSearchInput{
+	
+	height: 100%;
+	width: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large; 
+
+}
+
+.tabulkaObrazky{
+	height:auto;
+	width: 100%;
+	border: 6px solid gray;	
+	padding: 5%;	
+	border-collapse: collapse;
+	color: black;
+}
+
+.tabulkaObrazkyTr{
+	height: auto;
+	border: 6px solid gray;
+	max-height:10%;	
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large; 
+
+}
+
+.tabulkaObrazkyTd{
+	
+	max-height:10%;
+	border: 6px solid gray;	
+	display: table-cell;	
+	justify-content: center;
+	text-align: center;
+	width: auto;
+}
+
+.tabulkaObrazkyTh{
+
+	
+	
+	max-height:10%;
+	border: 6px solid gray;	
+	display: table-cell;	
+	justify-content: center;
+	text-align: center;
+	width: auto;
+}
+
+.tabulkaObrazkyTdInside{	
+	display: flex;
+	justify-content: center;
+    align-items: center;	
+
+}
+
+.tabulkaObrazekContainer{
+	
+	max-width: 15vh;	
+	max-height:5vh;
+	
+	min-height:5vh;
+	min-width:15vh;
+	
+	display: flex;
+	background-color: black;
+
+}
+.tabulkaObrazek
+{
+	max-width: 100%;
+	max-height:100%;
+	object-fit: contain;
+
+}
+
+.tabulkaSmazatForm{
+
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.tabulkasmazatContainer{
+
+	background-color: black;
+
+}
+
+
+
+.obrazekInputDiv{
+	height: 18%;
+	width: 100%;
+	
+	display: table;
+
+	padding: 1%;
+	box-sizing: border-box;
+	border: 6px solid gray;
+
+	
+}
+
+.obrazekInputForm{
+	
+	width: 100%;
+	
+	justify-content: center;
+    align-items: center;
+
+	display: table-cell;
+	vertical-align: middle;	
+}
+.tlacitkoObrazek{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large; 
+	float: right;
+}
+
+.vstupObrazek{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large; 	
+}
+
+.obrazekNahledContainer{
+	
+	height: 82%;
+	width: 100%;
+	
+	border: 6px solid gray;
+
+	box-sizing: border-box;
+	
+}
+
+.tabObsah2container{
+	
+	height:100%;
+	width: 100%;
+	overflow: auto;
+}
+
+.obrazekNahledDiv{
+	height:100%;
+	width: 100%;	
+	background-color: black;
+	
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.obrazekNahlednik{
+	max-width: 100%;
+	max-height:100%;
+	object-fit: contain;	
+}

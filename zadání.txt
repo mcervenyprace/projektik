@@ -1,0 +1,33 @@
+ZADÁNÍ:
+Vytvoøit webovou stránku, s MySQL databází a zázemím PHP. 
+
+Pøi vstupu na stránku se 
+a) v pøípadì chyby pøipojení k serveru vypíše hláška.
+b) v pøípadì neexistence databáze vytvoøí DB.
+c) v pøípadì existence DB ale bez existence uživatele formuláø vytvoøení prvního uživatele.
+d) v pøípadì existence aspoò jednoho uživatele pøihlašovací formuláø (bez možnosti vytvoøení nového).
+
+V pøípadì d) po zadání údajù se porovná s existujícími uživateli v DB a nepovolí vstup pøi zadání chybných údajù. 
+Existující uživatel mùže vytvoøit nového uživatele.
+
+Po pøihlášení se zobrazí jméno uživatele na stránce. Dále se zobrazí tøi záložky.
+
+První záložka je seznam nahraných obrázkù na serveru. 
+V záložce je našeptávaè, který filtruje obsah záložky podle textu v našeptávaèi. 
+Obrázky v seznamu lze zobrazit snadným klepnutím. 
+U obrázku je zobrazeno jaký uživatel jej nahrál. 
+Obrázek mùže smazat pouze uživatel co jej nahrál.
+ 
+Druhá záložka je vstup pro nahrávání obrázkù. 
+Lze vybrat obrázek a ten je následnì zkontrolován jestli je ve formátu JPEG, bmp nebo GIF. 
+Pokud ne, je zakázáno jej uploadovat. Pokud ano, zobrazí se potvrzovací hláška že obrázek byl nahrán, 
+a otevøe se první záložka. 
+Obrázky je možné pøidat pøetáhnutím na místo náhledu.
+Obrázek s daným názvem lze nahrát pouze jednou (a jedním uživatelem).
+
+Tøetí záložka zobrazuje jméno uživatele a tlaèítko k odhlášení. Po odhlášení se opìt zobrazí 
+formuláø pro pøihlášení. Také je zde tlaèítko pro vytvoøení nového uživatele.
+
+Poslední èást zadání je pokusit se pøidat základní prvky SEO. 
+Dovìtek je, že cílem projektu je demonstrovat schopnosti práces HTML, Javascript, PHP, SQL.
+

@@ -1,0 +1,15 @@
+html
+https://html5.validator.nu/
+php
+https://phpcodechecker.com/
+
+constants.php OK KOMENTÁØE
+DBCreate.php OK KOMENTÁØE
+MAIN.html (pracovní index.html) OK KOMENTÁØE(poèet chyb = 4 (+chyby související s inzertním elementem iframe od webhostingu))
+loadTable.php OK KOMENTÁØE 
+PHPforMAIN.php OK KOMENTÁØE
+styl.css OK KOMENTÁØE (poèet chyb = 19, z toho 18 chybné jednoøádkové komentáøe (//) + 17 varování)
+tableSearch.php OK KOMENTÁØE 
+templateDALSIuzivatel.html OK KOMENTÁØE (poèet chyb = 1)
+templatePRVNIuzivatel.html OK KOMENTÁØE (poèet chyb = 1)
+templateTABULKA.html OK KOMENTÁØE(poèet chyb = 13)

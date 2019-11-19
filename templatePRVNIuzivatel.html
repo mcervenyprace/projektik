@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<!-- toto je HTML stranka pro vytvoreni uzivatele -->
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="styl.css">
+
+<title>projektik - uzivatel default</title>
+</head>
+
+<body>
+
+
+<div class="pozadiDivUzivatel">
+
+	<div class="hlavniDivUzivatel">
+	
+	<div class = "nadpisDiv" >  
+		Zadejte jméno a heslo: 
+	</div>
+	
+		<form id="forma1" class = "formUzivatelClass" method="POST" action="PHPforMAIN.php">
+			<div class = "inputAndTextContainerDiv"> 			
+				Jméno:&nbsp;uživatele:&nbsp;
+			
+				<div class = "inputContainerDiv"> 
+					<input class= "inputText" type="text" name="jmenoUzivatele">
+				</div>
+		  </div>
+		  
+		  <div class = "inputAndTextContainerDiv"> 	
+			  Heslo:&nbsp;
+			  <div class = "inputContainerDiv"> 
+				<input class= "inputText" type="password"  name="heslo">			  
+			  </div>
+		  </div>
+		  
+		  <div class = "inputAndTextContainerDiv"> 	
+				Potvrzení hesla:&nbsp; 
+			  
+			  <div class = "inputContainerDiv"> 
+				<input class= "inputText" type="password" name="hesloPotvrzeni">			  
+			  </div>
+		  </div>
+
+		<input type="hidden" name="switch" value="2" />
+	
+		</form>
+
+	<div class = "buttonContainerDiv">
+		<div id="prvniUzivatelZobrazovac" class = "buttonLeftDiv">
+			(vytvoření prvního uživatele)	
+		</div>
+		<div class = "buttonRightDiv">
+			<button type="submit" form="forma1" value="Submit" class="tlacitko">Potvrdit</button>
+		</div>
+	</div>
+
+
+	</div>
+
+
+
+</div>
+
+</body>
+
+</html>
